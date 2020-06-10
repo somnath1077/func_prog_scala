@@ -1,11 +1,5 @@
-import section2.square_roots.sqrt_iter
-import section2.square_roots.sqrt
-import section3.recursion.gcd
-import section3.recursion.gcd_iter
-import section3.recursion.factorial
-import section3.hof.sum
-import section3.hof.sumTailRecursive
-import section3.hof.prod
+import section3.hof.fact
+import section3.hof.mapReduce
 
 object main {
   def main(args: Array[String]): Unit = {
@@ -23,8 +17,12 @@ object main {
     //    println(factorial(2))
     //    println(factorial(3))
     //    println(factorial(4))
-    println(sum((x: Int) => x, 1, 10))
-    println(sumTailRecursive((x: Int) => x, 1, 10))
-    println(prod((x: Int) => x)(1, 5))
+    //    println(sum((x: Int) => x, 1, 10))
+    //    println(sumTailRecursive((x: Int) => x, 1, 10))
+    //    println(prod((x: Int) => x)(1, 5))
+    println(fact(5))
+    println(mapReduce(x => x, (x, y) => x + y, 1)(1, 10))
+    println(mapReduce(x => x, (x, y) => x * y, 0)(1, 5))
+    println(mapReduce(x => x * x, (x, y) => x + y, 0)(1, 5))
   }
 }

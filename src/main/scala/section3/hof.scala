@@ -19,4 +19,12 @@ object hof {
     if (a > b) 1 else f(a) * prod(f)(a + 1, b)
   }
 
+  def fact(n: Int): Int = {
+    if (n <= 1) 1
+    else prod(x => x)(1, n)
+  }
+
+  def mapReduce(f: Int => Int, combine: (Int, Int) => Int, zero: Int)(a: Int, b: Int): Int = {
+    if (a > b) zero else combine(f(a), mapReduce(f, combine, zero)(a + 1, b))
+  }
 }
