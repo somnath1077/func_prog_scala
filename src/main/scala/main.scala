@@ -1,5 +1,5 @@
-import section3.hof.fact
-import section3.hof.mapReduce
+import section3.fixedpoint.sqrt
+import section3.hof.{fact, mapReduce}
 
 object main {
   def main(args: Array[String]): Unit = {
@@ -24,5 +24,6 @@ object main {
     println(mapReduce(x => x, (x, y) => x + y, 1)(1, 10))
     println(mapReduce(x => x, (x, y) => x * y, 0)(1, 5))
     println(mapReduce(x => x * x, (x, y) => x + y, 0)(1, 5))
+    println(sqrt(2))
   }
 }
