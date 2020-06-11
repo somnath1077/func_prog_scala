@@ -5,9 +5,9 @@ class Rational(x: Int, y: Int) {
 
     private val g = gcd(x, y)
 
-    def numer = x / g
+    val numer = x / g
 
-    def denom = y / g
+    val denom = y / g
 
     override def toString: String = {
         if (denom == 1) numer.toString
