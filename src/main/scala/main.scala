@@ -30,5 +30,6 @@ object main {
         val z2 = new Rational(5, 7)
         val z3 = z1.add(z2)
         println("z1 + z2 = " + z3)
+        println("z2 - z1 = " + z2.sub(z1))
     }
 }
