@@ -5,7 +5,7 @@ object fixedpoint {
   def isCloseEnough(d1: Double, d2: Double): Boolean = {
     def abs(x: Double): Double = if (x >= 0) x else -1 * x
 
-    val tol: Double = 1e-6
+    val tol: Double = 1e-8
 
     if (abs((d2 - d1) / d1) < tol) true
     else false

@@ -24,6 +24,6 @@ object main {
     println(mapReduce(x => x, (x, y) => x + y, 1)(1, 10))
     println(mapReduce(x => x, (x, y) => x * y, 0)(1, 5))
     println(mapReduce(x => x * x, (x, y) => x + y, 0)(1, 5))
-    println(sqrt(2))
+    println(sqrt(3))
   }
 }
