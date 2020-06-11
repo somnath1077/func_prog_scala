@@ -1,11 +1,12 @@
 package section5
 
 class Rational(x: Int, y: Int) {
-    require(y != 0, "denominator must not be zero")
+    require(y > 0, "denominator must be strictly positive")
 
     private def gcd(a: Int, b: Int): Int = if (b == 0) a else gcd(b, a % b)
 
-    private val g = gcd(x, y)
+
+    private val g = math.abs(gcd(x, y))
 
     val numer: Int = x / g
 
