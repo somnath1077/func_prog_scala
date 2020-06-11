@@ -27,7 +27,7 @@ object main {
         println(mapReduce(x => x * x, (x, y) => x + y, 0)(1, 5))
         println(sqrt(3))
         val z1 = new Rational(1, 2)
-        val z2 = new Rational(5, 7)
+        val z2 = new Rational(5, 10)
         val z3 = z1.add(z2)
         println("z1 + z2 = " + z3)
         println("z2 - z1 = " + z2.sub(z1))

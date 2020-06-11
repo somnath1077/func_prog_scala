@@ -1,11 +1,18 @@
 package section5
 
 class Rational(x: Int, y: Int) {
-    def numer = x
+    private def gcd(a: Int, b: Int): Int = if (b == 0) a else gcd(b, a % b)
 
-    def denom = y
+    private val g = gcd(x, y)
 
-    override def toString: String = x + "/" + y
+    def numer = x / g
+
+    def denom = y / g
+
+    override def toString: String = {
+        if (denom == 1) numer.toString
+        else numer + "/" + denom
+    }
 
     def isZero() = if (x == 0) true else false
 
