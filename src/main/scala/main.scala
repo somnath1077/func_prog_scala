@@ -1,5 +1,5 @@
-import section3.fixedpoint.sqrt
-import section3.hof.{fact, mapReduce}
+import section3.FixedPoint.sqrt
+import section3.HigherOrderFunctions.{fact, mapReduce}
 
 object main {
   def main(args: Array[String]): Unit = {

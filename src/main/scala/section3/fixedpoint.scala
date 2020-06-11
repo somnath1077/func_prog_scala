@@ -1,7 +1,7 @@
 package section3
 
 
-object fixedpoint {
+object FixedPoint {
     def isCloseEnough(d1: Double, d2: Double): Boolean = {
         def abs(x: Double): Double = if (x >= 0) x else -1 * x
 

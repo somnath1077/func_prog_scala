@@ -1,6 +1,6 @@
 package section3
 
-object recursion {
+object Recursion {
   def gcd(a: Int, b: Int): Int = if (b == 0) a else gcd(b, a % b)
 
   def gcd_iter(a: Int, b: Int): Int = {
