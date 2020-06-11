@@ -31,11 +31,11 @@ class Rational(x: Int, y: Int) {
         new Rational(num, den)
     }
 
-    def neg(): Rational = {
+    def neg: Rational = {
         new Rational(-1 * numer, denom)
     }
 
-    def sub(that: Rational): Rational = add(that.neg())
+    def sub(that: Rational): Rational = add(that.neg)
 
     def div(that: Rational): Rational = {
         if (that.isZero) throw new ArithmeticException("Divide by 0")
