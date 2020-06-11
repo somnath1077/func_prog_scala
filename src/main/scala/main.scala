@@ -35,5 +35,7 @@ object main {
         println("z2 - z1 = " + z2.sub(z1))
         println("z1 is less than z2: " + z1.less(z2))
         println("max(z1, z2) = " + z1.max(z2))
+        val z4 = new Rational(10)
+        println("z4 = " + z4)
     }
 }

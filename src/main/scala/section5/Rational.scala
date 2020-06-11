@@ -1,10 +1,14 @@
 package section5
 
+import scala.annotation.tailrec
+
 class Rational(x: Int, y: Int) {
     require(y > 0, "denominator must be strictly positive")
 
-    private def gcd(a: Int, b: Int): Int = if (b == 0) a else gcd(b, a % b)
+    def this(x: Int) = this(x, 1)
 
+    @tailrec
+    private def gcd(a: Int, b: Int): Int = if (b == 0) a else gcd(b, a % b)
 
     private val g = math.abs(gcd(x, y))
 
