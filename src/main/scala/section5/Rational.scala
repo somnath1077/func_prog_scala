@@ -1,7 +1,7 @@
 package section5
 
 class Rational(x: Int, y: Int) {
-    require(y != 0, "denominator must be non-zero")
+    require(y != 0, "denominator must not be zero")
 
     private def gcd(a: Int, b: Int): Int = if (b == 0) a else gcd(b, a % b)
 
