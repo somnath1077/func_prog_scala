@@ -6,8 +6,10 @@ class Rational(x: Int, y: Int) {
     def denom = y
 
     override def toString: String = x + "/" + y
-    
+
     def isZero() = if (x == 0) true else false
+
+    def isEqual(that: Rational) = x * that.denom == y * that.numer
 
     def add(that: Rational) = {
         val num = x * that.denom + y * that.numer
