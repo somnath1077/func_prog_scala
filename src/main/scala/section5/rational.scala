@@ -21,9 +21,7 @@ class Rational(x: Int, y: Int) {
         new Rational(-1 * x, y)
     }
 
-    def sub(that: Rational) = {
-        this.add(that.neg())
-    }
+    def sub(that: Rational) = add(that.neg())
 
     def div(that: Rational) = {
         if (that.isZero()) throw new ArithmeticException("Divide by 0")
