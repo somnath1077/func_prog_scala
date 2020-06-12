@@ -25,25 +25,25 @@ class Rational(x: Int, y: Int) {
 
     def isEqual(that: Rational): Boolean = numer * that.denom == denom * that.numer
 
-    def add(that: Rational): Rational = {
+    def + (that: Rational): Rational = {
         val num = numer * that.denom + denom * that.numer
         val den = denom * that.denom
         new Rational(num, den)
     }
 
-    def neg: Rational = {
+    def unary_- : Rational = {
         new Rational(-1 * numer, denom)
     }
 
-    def sub(that: Rational): Rational = add(that.neg)
+    def - (that: Rational): Rational = this + -that
 
-    def div(that: Rational): Rational = {
+    def / (that: Rational): Rational = {
         if (that.isZero) throw new ArithmeticException("Divide by 0")
         else new Rational(numer * that.denom, denom * that.numer)
     }
 
-    def less(that: Rational): Boolean = numer * that.denom < denom * that.numer
+    def < (that: Rational): Boolean = numer * that.denom < denom * that.numer
 
-    def max(that: Rational): Rational = if (this.less(that)) that else this
+    def max(that: Rational): Rational = if (this < that) that else this
 
 }
