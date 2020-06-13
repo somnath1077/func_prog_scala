@@ -1,6 +1,4 @@
-import section3.FixedPoint.sqrt
-import section3.HigherOrderFunctions.{fact, mapReduce}
-import section5.Rational
+import section5.{Empty, NonEmpty}
 
 object main {
     def main(args: Array[String]): Unit = {
@@ -21,21 +19,26 @@ object main {
         //    println(sum((x: Int) => x, 1, 10))
         //    println(sumTailRecursive((x: Int) => x, 1, 10))
         //    println(prod((x: Int) => x)(1, 5))
-        println(fact(5))
-        println(mapReduce(x => x, (x, y) => x + y, 1)(1, 10))
-        println(mapReduce(x => x, (x, y) => x * y, 0)(1, 5))
-        println(mapReduce(x => x * x, (x, y) => x + y, 0)(1, 5))
-        println(sqrt(3))
-        val z1 = new Rational(1, 2)
-        val z2 = new Rational(5, 8)
-        val z3 = z1 + z2
-        println("z1 = " + z1)
-        println("z2 = " + z2)
-        println("z1 + z2 = " + z3)
-        println("z2 - z1 = " + (z2 - z1))
-        println("z1 is less than z2: " + (z1 < z2))
-        println("max(z1, z2) = " + z1.max(z2))
-        val z4 = new Rational(10)
-        println("z4 = " + z4)
+        //        println(fact(5))
+        //        println(mapReduce(x => x, (x, y) => x + y, 1)(1, 10))
+        //        println(mapReduce(x => x, (x, y) => x * y, 0)(1, 5))
+        //        println(mapReduce(x => x * x, (x, y) => x + y, 0)(1, 5))
+        //        println(sqrt(3))
+        //        val z1 = new Rational(1, 2)
+        //        val z2 = new Rational(5, 8)
+        //        val z3 = z1 + z2
+        //        println("z1 = " + z1)
+        //        println("z2 = " + z2)
+        //        println("z1 + z2 = " + z3)
+        //        println("z2 - z1 = " + (z2 - z1))
+        //        println("z1 is less than z2: " + (z1 < z2))
+        //        println("max(z1, z2) = " + z1.max(z2))
+        //        val z4 = new Rational(10)
+        //        println("z4 = " + z4)
+
+        val t1 = new NonEmpty(5, new Empty, new Empty)
+        val t2 = t1.incl(10)
+        val t3 = t2.incl(2).incl(1).incl(14).incl(20)
+        println(t3)
     }
 }
