@@ -1,5 +1,6 @@
 import section5.{Empty, NonEmpty}
 
+
 object scratch {
     val t1 = new NonEmpty(5, Empty, Empty)
     val t2 = t1.incl(10)

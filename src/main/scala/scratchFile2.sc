@@ -1,3 +1,4 @@
-import section6.AllThingsLists.myList
+import section5.Rational
 
-myList()
+
+val z = new Rational(1, 2)

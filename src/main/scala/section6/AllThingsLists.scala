@@ -1,6 +1,6 @@
 package section6
 
-object  AllThingsLists {
+object AllThingsLists {
     def myList(): Unit = {
         val fruits = List("pears", "apples", "bananas")
         println(fruits)
