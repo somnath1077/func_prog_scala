@@ -10,10 +10,10 @@ abstract class IntSet {
     def toString: String
 }
 
-class Empty extends IntSet {
+object Empty extends IntSet {
     def contains(x: Int): Boolean = false
 
-    def incl(x: Int): IntSet = new NonEmpty(x, new Empty, new Empty)
+    def incl(x: Int): IntSet = new NonEmpty(x, Empty, Empty)
 
     def isEmpty: Boolean = true
 
