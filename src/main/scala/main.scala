@@ -46,7 +46,7 @@ object main {
     println(t3)
     myList()
 
-    val x = List(13, 8, -1, 4)
+    val x = List(13, 8, -1, 4, 19, 0, -4, 78)
     println(isort(x))
   }
 }
