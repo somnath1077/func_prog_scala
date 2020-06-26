@@ -1,7 +1,8 @@
 import section3.FixedPoint.sqrt
 import section3.HigherOrderFunctions.{fact, mapReduce, prod}
 import section5.{Empty, NonEmpty, Rational}
-import section6.AllThingsLists.myList
+import section6.AllThingsLists.{myList, isort}
+import scala.collection.immutable.List
 
 object main {
   def main(args: Array[String]): Unit = {
@@ -44,5 +45,8 @@ object main {
     val t3 = t2.incl(2).incl(1).incl(14).incl(20)
     println(t3)
     myList()
+
+    val x = List(13, 8, -1, 4)
+    println(isort(x))
   }
 }
