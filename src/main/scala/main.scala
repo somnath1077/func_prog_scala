@@ -2,6 +2,7 @@ import section3.FixedPoint.sqrt
 import section3.HigherOrderFunctions.{fact, mapReduce, prod}
 import section5.{Empty, NonEmpty, Rational}
 import section6.Lists._
+import section6.PairsAndTuples.mergesort
 
 import scala.collection.immutable.List
 
@@ -59,5 +60,8 @@ object main {
         val y3 = List()
         val y4 = List(10)
         println(concat(concat(concat(y1, y2), y3), y4))
+
+        val l1 = List(78.0, 17, 35, 1245.0, 0, -45, 17, 56, -90, 10000.0)
+        println(mergesort(l1))
     }
 }
