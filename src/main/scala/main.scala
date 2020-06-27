@@ -61,8 +61,10 @@ object main {
         val y4 = List(10)
         println(concat(concat(concat(y1, y2), y3), y4))
         val l = List(999, -8, 0.0, 12, 45, 3, 9.0)
+        val fruits = List("oranges", "apples", "strawberries", "peaches", "plums", "guavas")
         println(mergesort(l))
         val l1: List[Double] = Seq.fill(10000)(scala.util.Random.nextDouble).toList.map(_ * 1000)
         println(mergesort(l1))
+        println(mergesort(fruits))
     }
 }
