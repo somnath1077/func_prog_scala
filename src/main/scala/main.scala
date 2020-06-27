@@ -60,8 +60,9 @@ object main {
         val y3 = List()
         val y4 = List(10)
         println(concat(concat(concat(y1, y2), y3), y4))
-
-        val l1 = List(78.0, 17, 35, 1245.0, 0, -45, 17, 56, -90, 10000.0)
+        val l = List(999, -8, 0.0, 12, 45, 3, 9.0)
+        println(mergesort(l))
+        val l1: List[Double] = Seq.fill(10000)(scala.util.Random.nextDouble).toList.map(_ * 1000)
         println(mergesort(l1))
     }
 }
