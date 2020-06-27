@@ -18,7 +18,7 @@ object PairsAndTuples {
         val n = xs.length / 2
         if (n == 0) xs else {
             val (first, second) = xs.splitAt(n)
-            merge(mergesort(first)(ord), mergesort(second)(ord), Nil)
+            merge(mergesort(first), mergesort(second), Nil)
         }
     }
 }
