@@ -3,6 +3,7 @@ import section3.HigherOrderFunctions.{fact, mapReduce, prod}
 import section5.{Empty, NonEmpty, Rational}
 import section6.Lists._
 import section6.PairsAndTuples.mergesort
+import section6.HigherOrderListFunctions._
 
 import scala.collection.immutable.List
 
@@ -65,6 +66,11 @@ object main {
         println(mergesort(l))
         val l1: List[Double] = Seq.fill(10000)(scala.util.Random.nextDouble).toList.map(_ * 1000)
         println(mergesort(l1))
+        println(squareList(y1))
         println(mergesort(fruits))
+
+        val s = List("a", "a", "a", "b", "c", "c", "a", "c", "c")
+        println(pack(s))
+        println(encode(s))
     }
 }
