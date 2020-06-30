@@ -1,5 +1,7 @@
 package section6
 
+import scala.annotation.tailrec
+
 object HigherOrderListFunctions {
     def squareList(xs: List[Int]): List[Int] = xs match {
         case List() => xs
@@ -20,5 +22,11 @@ object HigherOrderListFunctions {
         case x :: xs1 =>
             val (first, last) = xs span (y => y == x)
             (x, first.length) :: encode(last)
+    }
+
+    @tailrec
+    def concat[T](xs: List[T], ys: List[T]): List[T] = ys match {
+        case Nil => xs
+        case y :: ys1 => concat(xs ++ List(y), ys1)
     }
 }

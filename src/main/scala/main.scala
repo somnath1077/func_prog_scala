@@ -3,7 +3,7 @@ import section3.HigherOrderFunctions.{fact, mapReduce, prod}
 import section5.{Empty, NonEmpty, Rational}
 import section6.Lists._
 import section6.PairsAndTuples.mergesort
-import section6.HigherOrderListFunctions._
+import section6.HigherOrderListFunctions.{concat, squareList, pack, encode}
 
 import scala.collection.immutable.List
 
