@@ -24,9 +24,9 @@ object HigherOrderListFunctions {
             (x, first.length) :: encode(last)
     }
 
-    @tailrec
-    def concat[T](xs: List[T], ys: List[T]): List[T] = ys match {
-        case Nil => xs
-        case y :: ys1 => concat(xs ++ List(y), ys1)
+
+    def concat[T](xs: List[T], ys: List[T]): List[T] = xs match {
+        case Nil => ys
+        case x :: xs1 => x :: concat(xs1, ys)
     }
 }
