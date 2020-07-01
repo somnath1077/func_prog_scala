@@ -27,4 +27,9 @@ object HigherOrderListFunctions {
     case Nil => ys
     case x :: xs1 => x :: concat(xs1, ys)
   }
+
+  def posElems(xs: List[Int]): List[Int] = xs match {
+    case Nil => Nil
+    case y :: ys => if (y > 0) y :: posElems(ys) else posElems(ys)
+  }
 }
