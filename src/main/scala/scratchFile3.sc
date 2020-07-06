@@ -2,11 +2,12 @@ import scala.annotation.tailrec
 
 object collatz {
   @tailrec
-  def collatzLength(n: Int, len: Int = 1): Int = {
-    if (n <= 1) len
+  def collatzLength(n: Int, compArr: Array[Int], len: Int = 1): Int = {
+    if (n == 1) len
     else {
-      if (n % 2 == 0) collatzLength(n / 2, len + 1)
-      else collatzLength((3 * n + 1) / 2, len + 2)
+      if (compArr(n - 1) != -1) len + compArr(n - 1)
+      else if (n % 2 == 0) collatzLength(n / 2, compArr, len + 1)
+      else collatzLength((3 * n + 1) / 2, compArr, len + 2)
     }
   }
 
@@ -25,8 +26,11 @@ object collatz {
 
   def main(): Unit = {
     val MAX_INT: Int = 1000000
-    val sz: Array[Int] = Array.tabulate(MAX_INT)(n => collatzLength(n + 1))
-    println(argmax(sz))
+    val sz: Array[Int] = Array.fill(MAX_INT)(-1)
+    for (i <- 1 to MAX_INT) {
+      sz(i) = collatzLength(i, sz)
+    }
+   println(argmax(sz))
   }
 
 }
